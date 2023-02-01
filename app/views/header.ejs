@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        
+        .footer {
+            background-color: pink;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+  <body>
+    <div class="header">
+        <div>Webboard Online</div> 
+        <div>
+            <% if(session.user_id == undefined) { %>
+            <a href="/login" class="btn btn-primary">Login</a>
+            <a href="/register" class="btn btn-primary">Register</a>
+            
+            <% }else{ %>
+                user: <%= session.user_name %>
+                <a class="btn btn-danger" href="/logout" onclick="return confirm('Log out?')">
+                    Log out
+                </a>
+                <a href="/board" class="btn btn-primary">Board</a>
+            <% } %>    
+        </div>
+    </div>
+    <h1></h1>

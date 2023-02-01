@@ -1,0 +1,18 @@
+<%- include('header') %>
+
+    <form method="post" action="/login">
+        <h3>Login</h3>
+        <div>
+            <label>Username</label>
+            <input type="text" name="user" class="form-control" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="pass" class="form-control" />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mt-3">Login</button>
+        </div>
+    </form>
+
+<%- include('footer') %> 

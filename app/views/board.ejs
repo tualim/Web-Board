@@ -1,0 +1,17 @@
+<%- include('header') %>
+
+    <h3>Board</h3>
+    <div>
+        <a href="/topic" class="btn btn-primary" > New topic</a>
+        <div>
+            <% topics.forEach((topic) => { %>
+                <div class="alert alert-info">
+                    <div class="float-left"><a href="/comment/<%= topic.id %>"><%= topic.topic %></a></div>
+                    <div class="float-right">By: <%= topic.name %></div>
+                    <div class="clearfix"></div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+<%- include('footer') %>
